@@ -4,7 +4,6 @@ import pytesseract
 
 app = Flask(__name__)
 
-pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\tesseract.exe"
 
 @app.route("/", methods=["GET", "POST"])
 def index():
