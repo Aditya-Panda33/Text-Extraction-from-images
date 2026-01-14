@@ -13,4 +13,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 # Run Gunicorn on the correct port for Render
-CMD ["gunicorn", "app:app", "-b", "0.0.0.0:10000"]
+CMD ["gunicorn", "app:app", "-b", "0.0.0.0:10000", "--timeout", "300"]
