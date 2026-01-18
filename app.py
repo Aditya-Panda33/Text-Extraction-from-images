@@ -1,6 +1,7 @@
 from flask import Flask, request, render_template
 from PIL import Image
 import pytesseract
+import streamlit as st
 
 app = Flask(__name__)
 
@@ -17,4 +18,9 @@ def index():
     return render_template("index.html", text=extracted_text)
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=10000, debug=True)
+    app.run(
+        host="0.0.0.0",
+        port=10000,
+        debug=True,
+        use_reloader=False
+    )
